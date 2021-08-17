@@ -4,20 +4,20 @@
 * 이상한게 있다면 말씀해주시면 감사하겠습니다.
 ## Contents
 ### 정렬 (Sorting)
-* [선택 정렬 (Selection Sort)](/searching/selection_sort.py)
-* [삽입 정렬 (Insertion Sort)](/searching/insertion_sort.py)
+* [선택 정렬 (Selection Sort)](/sorting/selection_sort.py)
+* [삽입 정렬 (Insertion Sort)](/sorting/insertion_sort.py)
 * 퀵 정렬 Quick Sort
 * Counting Sort
 * Python Sort Library
 ### Searching
-* 깊이 우선 탐색 (DFS, Depth First Search)
-* 너비 우선 탐색 (BFS, Breath First Search)
+* [깊이 우선 탐색 (DFS, Depth First Search)](/searching/dfs.py)
+* [너비 우선 탐색 (BFS, Breath First Search)](/searching/bfs.py)
 * 이진 탐색 (Binary Search)
 ### Graph
 * 다익스트라 (Dijstra)
-* 최소 스패닝 트리 (MST, Minimun Spanning Tree)
+* 최소 신장 트리 (MST, Minimum Spanning Tree)
 ### Data Structure
-* Disjoint-Set (Union Find)
+* 서로소 집합 Disjoint-Set (Union Find)
 ### String
 * KMP
 ### Dynamic Programming
