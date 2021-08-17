@@ -4,8 +4,8 @@
 * 이상한게 있다면 말씀해주시면 감사하겠습니다.
 ## Contents
 ### 정렬 (Sorting)
-* [선택 정렬 (Selection Sort)](/Searching/SelectionSort.py)
-* 삽입 정렬 Insertion Sort
+* [선택 정렬 (Selection Sort)](/searching/selection_sort.py)
+* [삽입 정렬 (Insertion Sort)](/searching/insertion_sort.py)
 * 퀵 정렬 Quick Sort
 * Counting Sort
 * Python Sort Library
@@ -34,5 +34,5 @@
 ### Miscellaneous
 
 ### PS Site
-* [Baekjoon](/Baekjoon)
+* [백준 온라인 저지 (Baekjoon Online Judge)](/baekjoon)
 
