@@ -4,7 +4,7 @@
 * 이상한게 있다면 말씀해주시면 감사하겠습니다.
 ## Contents
 ### Sorting
-* Selection Sort
+* [Selection Sort] (/Searching/SelectionSort.py)
 * Insertion Sort
 * Quick Sort
 * Counting Sort
