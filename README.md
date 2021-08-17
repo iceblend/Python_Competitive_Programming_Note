@@ -3,19 +3,19 @@
 * 부족한게 많습니다. 
 * 이상한게 있다면 말씀해주시면 감사하겠습니다.
 ## Contents
-### Sorting
-* [Selection Sort](/Searching/SelectionSort.py)
-* Insertion Sort
-* Quick Sort
+### 정렬 (Sorting)
+* [선택 정렬 (Selection Sort)](/Searching/SelectionSort.py)
+* 삽입 정렬 Insertion Sort
+* 퀵 정렬 Quick Sort
 * Counting Sort
 * Python Sort Library
 ### Searching
-* DFS
-* BFS
-* Binary Search
+* 깊이 우선 탐색 (DFS, Depth First Search)
+* 너비 우선 탐색 (BFS, Breath First Search)
+* 이진 탐색 (Binary Search)
 ### Graph
-* Dijstra
-* Minimun Spanning Tree (MST)
+* 다익스트라 (Dijstra)
+* 최소 스패닝 트리 (MST, Minimun Spanning Tree)
 ### Data Structure
 * Disjoint-Set (Union Find)
 ### String
