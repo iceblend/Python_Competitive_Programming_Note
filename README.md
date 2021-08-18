@@ -9,7 +9,7 @@
 * 퀵 정렬 Quick Sort
 * Counting Sort
 * Python Sort Library
-### Searching
+### 탐색 (Searching)
 * [깊이 우선 탐색 (DFS, Depth First Search)](/searching/dfs.py)
 * [너비 우선 탐색 (BFS, Breath First Search)](/searching/bfs.py)
 * 이진 탐색 (Binary Search)
