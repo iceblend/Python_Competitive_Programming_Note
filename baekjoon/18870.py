@@ -1,16 +1,9 @@
 # 18870 좌표 압축
-# 시간 초과
 
 n = int(input())
 arr = list(map(int, input().split()))
-
-sort_arr = []
-for a in arr:
-    if a not in sort_arr:
-        sort_arr.append(a);
-
-sort_arr.sort()
+sort_arr = sorted(set(arr))
+dict_arr = {v : i for i, v in enumerate(sort_arr)}
 
 for a in arr:
-    idx = sort_arr.index(a);
-    print(idx, end=' ')
+    print(dict_arr[a], end=' ')
