@@ -1,48 +1,42 @@
-import sys
-sys.setrecursionlimit(100000)
-
 dy = [1, -1, 0, 0]
 dx = [0, 0, 1, -1]
 
-N, M = map(int, input().split())
-board = [input() for _ in range(N)]
-check = [[0] * M for _ in range(N)]
-res = False
+n, m = map(int, input().split())
+a = [input() for _ in range(n)]
+dist = [[0] * m for _ in range(n)]
+check = [[False] * m for _ in range(n)]
 
 
-def dfs(curr_y, curr_x, origin_y, origin_x, cnt):
-    global res
-    if res:
-        return
+def dfs(y, x, color, cnt):
+    if check[y][x]:
+        if cnt - dist[y][x] >= 4:
+            return True
+        else:
+            return False
 
-    check[curr_y][curr_x] = 1
+    check[y][x] = True
+    dist[y][x] = cnt
 
     for d in range(4):
-        next_y = curr_y + dy[d]
-        next_x = curr_x + dx[d]
+        ny = y + dy[d]
+        nx = x + dx[d]
 
-        #if 0 <= next_y < N and 0 <= next_x < M:
-        if next_y < 0 or N <= next_y or next_x < 0 or M <= next_x:
+        if 0 <= ny < n and 0 <= nx < m:
+            if a[ny][nx] == color:
+                if dfs(ny, nx, color, cnt + 1):
+                    return True
+    return False
+
+
+for i in range(n):
+    for j in range(m):
+        if check[i][j]:
             continue
 
-        if board[next_y][next_x] != board[origin_y][origin_x]:
-            continue
+        dist = [[0] * m for _ in range(n)]
+        ok = dfs(i, j, a[i][j], 0)
+        if ok:
+            print("Yes")
+            exit()
 
-        if next_y == origin_y and next_x == origin_x and cnt >= 4:
-            res = True
-            return
-
-        if check[next_y][next_x] == 0:
-            dfs(next_y, next_x, origin_y, origin_x, cnt + 1)
-    return
-
-
-for i in range(N):
-    for j in range(M):
-        check = [[0] * M for _ in range(N)]
-        dfs(i, j, i, j, 0)
-
-if res:
-    print("Yes")
-else:
-    print("No")
+print("No")
