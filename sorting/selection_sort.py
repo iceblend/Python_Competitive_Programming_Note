@@ -1,4 +1,4 @@
-data = [8, 5, 4, 7, 2]
+arr = [8, 5, 4, 7, 2]
 
 ''' Selection Sort '''
 for i in range(len(data)):
