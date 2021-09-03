@@ -7,7 +7,7 @@
 * [선택 정렬 (Selection Sort)](/sorting/selection_sort.py)
 * [삽입 정렬 (Insertion Sort)](/sorting/insertion_sort.py)
 * [퀵 정렬 (Quick Sort)](/sorting/quick_sort.py)
-* [힙 정렬(Heap Sort)] 
+* [힙 정렬(Heap Sort)](/sorting/heap_sort.py)
 * Counting Sort
 * Python Sort Library
 ### 탐색 (Searching)
