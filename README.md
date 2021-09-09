@@ -15,7 +15,7 @@
 * [너비 우선 탐색 (BFS, Breath First Search)](/searching/bfs.py)
 * 이진 탐색 (Binary Search)
 ### Graph
-* 다익스트라 (Dijstra)
+* [다익스트라 (Dijstra)](/graph/dijstra.py)
 * 최소 신장 트리 (MST, Minimum Spanning Tree)
 ### Data Structure
 * 서로소 집합 Disjoint-Set (Union Find)
