@@ -3,13 +3,46 @@
 def check(x, y, v):
     global board
 
+    arr = []
+    # 3x3 체크
     sx = x // 3
     sy = y // 3
-
     for i in range(y, y+3):
         for j in range(x, x+3):
+            if i == y and j == x:
+                arr.append(v)
+            else:
+                arr.append(board[i][j])
+    arr.sort()
+    for i in range(0, 9):
+        if arr[i] != i+1:
+            return False
 
+    # y축 체크
+    arr.clear()
+    for j in range(0, 9):
+        if x == j:
+            arr.append(v)
+        else:
+            arr.append(board[y][j])
+    arr.sort()
+    for i in range(0, 9):
+        if arr[i] != i+1:
+            return False
 
+    # x축 체크
+    arr.clear()
+    for i in range(0, 9):
+        if y == i:
+            arr.append(v)
+        else:
+            arr.append(board[i][x])
+    arr.sort()
+    for i in range(0, 9):
+        if arr[i] != i + 1:
+            return False
+
+    return True
 
 
 def search(arr, n):
@@ -33,7 +66,9 @@ def search(arr, n):
                 if isIn == False:
                     # 0 자리에 값을 이것저것 넣어서 체크 해보고 백트래킹 함
                     for i in range(1, 10):
-                    
+
+                        arr.append([y, x, i])
+                        search()
 
 
 
