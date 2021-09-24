@@ -1,92 +1,54 @@
 #2580 스도쿠
 
+# 3x3 체크
 def check(x, y, v):
     global board
 
-    arr = []
-    # 3x3 체크
-    sx = x // 3
-    sy = y // 3
-    for i in range(y, y+3):
-        for j in range(x, x+3):
-            if i == y and j == x:
-                arr.append(v)
-            else:
-                arr.append(board[i][j])
-    arr.sort()
-    for i in range(0, 9):
-        if arr[i] != i+1:
-            return False
+    sx = x // 3 * 3
+    sy = y // 3 * 3
+    for i in range(sy, sy+3):
+        for j in range(sx, sx+3):
+            if v == board[i][j]:
+                return False
 
-    # y축 체크
-    arr.clear()
     for j in range(0, 9):
-        if x == j:
-            arr.append(v)
-        else:
-            arr.append(board[y][j])
-    arr.sort()
-    for i in range(0, 9):
-        if arr[i] != i+1:
+        if v == board[y][j]:
             return False
 
-    # x축 체크
-    arr.clear()
     for i in range(0, 9):
-        if y == i:
-            arr.append(v)
-        else:
-            arr.append(board[i][x])
-    arr.sort()
-    for i in range(0, 9):
-        if arr[i] != i + 1:
+        if v == board[i][x]:
             return False
 
     return True
 
 
-def search(arr, n):
+def search(cnt):
     global board
+    global arr_zero
 
-    if len(arr) == n:
-        return arr
+    # endpoint
+    if cnt == len(arr_zero):
+        for ty in range(9):
+            for tx in range(9):
+                print(board[ty][tx], end=' ')
+            print()
+        exit()
 
-    for y in range(9):
-        for x in range(9):
-            if board[y][x] == 0:
+    y = arr_zero[cnt][0]
+    x = arr_zero[cnt][1]
 
-                # 체크하기
-                isIn = False
-                for a in arr:
-                    ax, ay, av = a[0], a[1], a[2]
-                    if ax == x and ay == y:
-                        isIn = True
+    for i in range(1, 10):
+        if check(x, y, i):
+            board[y][x] = i
+            search(cnt + 1)
+            board[y][x] = 0
 
-                # 만약 arr 안에 없다면
-                if isIn == False:
-                    # 0 자리에 값을 이것저것 넣어서 체크 해보고 백트래킹 함
-                    for i in range(1, 10):
-
-                        arr.append([y, x, i])
-                        search()
-
-
-
-
-
-countZero = 0
+arr_zero = []
 board = [[] for _ in range(9)]
 for i in range(9):
     board[i] = list(map(int, input().split()))
-    countZero += board[i].count(0)
+    for j in range(9):
+        if board[i][j] == 0:
+            arr_zero.append([i, j])
 
-
-
-
-
-
-
-
-
-
-
+search(0)

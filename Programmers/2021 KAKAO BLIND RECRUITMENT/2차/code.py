@@ -40,8 +40,9 @@ class APIComm:
 
 base_url = "https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users"
 x_auth_token = "dbe8808fe6b71e44ca5697496b607583"
-
 comm = APIComm(base_url, x_auth_token)
+
+
 res = comm.Start(1)
 res_json = res.json()
 print(res_json)
