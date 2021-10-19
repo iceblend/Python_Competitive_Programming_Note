@@ -1,7 +1,7 @@
 # 21609 상어 중학교
 
-dy = [1, -1, 0, 0]
-dx = [0, 0, 1, -1]
+dy = [-1, 1, 0, 0]
+dx = [0, 0, -1, 1]
 N, M = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(N)]
 
